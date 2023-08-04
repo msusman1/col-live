@@ -7,7 +7,7 @@ const Container = ({data}) => {
                     title={"Ellwood at Lake Travis"}
                     address={"7655 N Ranch Road 620, Austin, TX 78726"}
                     price={"$1,195 - 2,465"}
-                    amenities={"Dog &amp; Cat Friendly Fitness Center Pool In Unit Washer &amp; Dryer Walk-In Closets Clubhouse Stainless Steel Appliances Business Center"}
+                    amenities={"Dog & Cat Friendly Fitness Center Pool In Unit Washer &amp; Dryer Walk-In Closets Clubhouse Stainless Steel Appliances Business Center"}
                     phone={"(737) 237-9124"}
                 />
                 <DepartmantCard
@@ -15,7 +15,7 @@ const Container = ({data}) => {
                     title={"The District on La Frontera"}
                     address={"2811 La Frontera Blvd, Austin, TX 78728"}
                     price={"$1,256 - 6,365"}
-                    amenities={"Dog &amp; Cat Friendly Fitness Center Pool Dishwasher Refrigerator Kitchen In Unit Washer &amp; Dryer Walk-In Closets"}
+                    amenities={"Dog & Cat Friendly Fitness Center Pool Dishwasher Refrigerator Kitchen In Unit Washer &amp; Dryer Walk-In Closets"}
                     phone={"(844) 225-8941"}
                 />
                 {
