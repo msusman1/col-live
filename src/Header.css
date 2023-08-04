@@ -1,0 +1,26 @@
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    margin-right: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+
+.search-bar.expanded input {
+    width: 160px;
+    margin-right: 8px;
+}
+

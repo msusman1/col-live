@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import {Header} from "./components/Header";
+import {Navbar} from "./components/Navbar";
+import {Container} from "./components/Container";
+import loading from "./images/loading.gif";
+import {useEffect, useState} from "react";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [data, setData] = useState(null);
+    useEffect(() => {
+        fetch('https://staging.collive.com/classified-demo.php')
+            .then(response => response.json())
+            .then(data => setData(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+    return (
+        <div>
+            <Header/>
+            <Navbar/>
+            {data ? (
+                <Container data={data}/>
+            ) : (
+                <div style={{
+                    height: "100vh",
+                    width: "100vw",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                }}>
+                    <img height={64} width={64} src={loading}/>
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default App;
