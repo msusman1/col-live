@@ -17,7 +17,7 @@ function App() {
         <div>
             <Header/>
             <Navbar/>
-            {data ? (
+              {data ? (
                 <Container data={data}/>
             ) : (
                 <div style={{
